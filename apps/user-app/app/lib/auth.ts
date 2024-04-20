@@ -21,6 +21,7 @@ export const authOptions = {
             });
 
             if (existingUser) {
+                // const passwordValidation = credentials.password === existingUser.password
                 const passwordValidation = await bcrypt.compare(credentials.password, existingUser.password);
                 if (passwordValidation) {
                     return {
@@ -58,7 +59,7 @@ export const authOptions = {
         // TODO: can u fix the type here? Using any is bad
         async session({ token, session }: any) {
             session.user.id = token.sub
-
+            // console.log("hi")
             return session
         }
     }
