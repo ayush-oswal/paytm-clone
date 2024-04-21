@@ -1,0 +1,8 @@
+POST http://localhost:3003/hdfcWebhook
+Content-Type: application/json
+
+{
+    "token": "483.8544907708919",
+    "user_identifier": 4,
+    "amount": 6900
+}
