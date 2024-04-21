@@ -41,7 +41,7 @@ export default async function() {
                 <div className="flex flex-col mr-4">
                     <h2 className="text-lg font-bold">Sent</h2>
                     {sent.map((transaction, index) => (
-                        <div key={index}>{`s${index + 1}:  ₹${transaction.amount/100} (${formatDate(transaction.timestamp)}) to ${transaction.toUserId}`}</div>
+                        <div key={index}>{`s${index + 1}:  ₹${transaction.amount/100} on(${formatDate(transaction.timestamp)}) to ${transaction.toUserId}`}</div>
                     ))}
                 </div>
                 <div className="flex flex-col">
