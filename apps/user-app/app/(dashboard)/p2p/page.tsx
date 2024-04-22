@@ -39,13 +39,13 @@ export default async function() {
             <SendCard />
             <div className="flex">
                 <div className="flex flex-col mr-4">
-                    <h2 className="text-lg font-bold">Sent</h2>
+                    <h2 className="text-lg font-bold text-green-500">Sent</h2>
                     {sent.map((transaction, index) => (
                         <div key={index}>{`s${index + 1}:  ₹${transaction.amount/100} on(${formatDate(transaction.timestamp)}) to ${transaction.toUserId}`}</div>
                     ))}
                 </div>
                 <div className="flex flex-col">
-                    <h2 className="text-lg font-bold">Received</h2>
+                    <h2 className="text-lg font-bold text-red-500">Received</h2>
                     {received.map((transaction, index) => (
                         <div key={index}>{`r${index + 1}:  ₹${transaction.amount/100} (${formatDate(transaction.timestamp)}) from ${transaction.fromUserId}`}</div>
                     ))}
