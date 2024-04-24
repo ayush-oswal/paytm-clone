@@ -24,7 +24,7 @@ jobs:
         context: .
         file: ./docker/Dockerfile.user
         push: true
-        tags: ayushoswal2207/paytm_clone  # Replace with your Docker Hub username and repository
+        tags: ayushoswal2207/paytm_clone  
 
     - name: Verify Pushed Image
-      run: docker pull ayushoswal2207/paytm_clone  # Replace with your Docker Hub username and repository
+      run: docker pull ayushoswal2207/paytm_clone  
